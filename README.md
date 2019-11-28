@@ -1,4 +1,4 @@
-# crud básico desmonstrando python e django
+# crud básico python e django
 
 * Apresentação Centev 28/11/2019
 
