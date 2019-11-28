@@ -1,0 +1,79 @@
+mkdir centev
+cd centev
+
+python -m venv .env
+
+source .venv/bin/activate
+
+pip install django
+
+django-admin startproject crud .
+
+python manage.py
+
+python manage.py runserver
+
+cd crud
+
+python ../manage.py startapp core
+
+cd ..
+
+pycharm
+
+Conferir interpretador
+
+app core settings add crud.core
+
+urls.py - criar rota
+
+    path('', crud.core.views.home),
+
+views.py
+
+(view do django = um objeto chamável que recebe um httprequest e retorna um httpresponse)
+
+    def home(request):
+        return render(request, 'index.html')
+
+core/templates
+    index.html
+
+delete test.py
+add path tests
+add file tests/test_view_home.py
+    from django.test import TestCase
+
+
+    class HomeViewTest(TestCase):
+        def setUp(self):
+            self.response = self.client.get('/')
+
+        def test_get(self):
+            """get '/' return status code 200"""
+            self.assertEqual(200, self.response.status_code)
+
+        def test_use_template(self):
+            """está usando core/template/index.html"""
+            self.assertTemplateUsed(self.response, 'index.html')
+
+
+Resumo
+
+Criamos um projeto django com o nome de crud
+Criamos uma app com o nome core
+instalamos a app core no settings
+configuramos uma rota para raiz do site
+associamos essa rota a uma view home dentro da app core
+e essa view renderiza um arquivo index.html
+Criamos testes
+
+
+
+
+
+
+
+
+
+
