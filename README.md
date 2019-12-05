@@ -2,15 +2,14 @@
 
 # crud básico python e django
 
-* Apresentação Centev 28/11/2019
+* Apresentação Centev 05/12/2019
 
 * Roteiro e doc em /docs
 
 #### Executando o projeto
 
-* Crie uma pasta: `mkdir centev` e acesse-a: `cd centev`
 
-* Clone o repositório: `git clone https://github.com/juniorcarvalho/centev.git .`
+* Clone o repositório: `git clone https://github.com/juniorcarvalho/centev.git`
 
 * Crie um virtualenv: `python -m venv .venv`
 
