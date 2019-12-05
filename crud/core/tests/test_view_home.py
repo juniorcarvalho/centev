@@ -3,7 +3,7 @@ from django.test import TestCase
 from crud.core.forms import PeopleForm
 
 
-class HomeViewTest(TestCase):
+class HomeViewGetTest(TestCase):
     def setUp(self):
         self.response = self.client.get('/')
 

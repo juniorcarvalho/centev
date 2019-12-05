@@ -19,7 +19,9 @@ from django.urls import path
 import crud.core.views
 
 urlpatterns = [
-    path('', crud.core.views.home),
+    path('', crud.core.views.home, name='index'),
+    path('edit/<int:pk>/', crud.core.views.home, name='edit'),
+    path('remove/<int:pk>/', crud.core.views.remove, name='remove'),
     path('admin/', admin.site.urls),
 
 ]

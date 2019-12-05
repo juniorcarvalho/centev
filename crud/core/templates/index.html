@@ -66,6 +66,7 @@
                     <th scope="col">Nome</th>
                     <th scope="col">Email</th>
                     <th scope="col">Telefone</th>
+                    <th scope="col">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -75,6 +76,8 @@
                         <td>{{ p.name }}</td>
                         <td>{{ p.email }}</td>
                         <td>{{ p.telefone }}</td>
+                        <td><a href="{% url 'edit' p.id %}">Editar</a></td>
+                        <td><a href="{% url 'remove' p.id %}">Excluir</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
